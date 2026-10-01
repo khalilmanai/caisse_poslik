@@ -204,3 +204,5 @@ L'`id` est un **push id généré sur l'appareil**, donc la clé est stable d'un
   la console apparaissent sur la tablette et inversement, `ticketIndex` et curseur cohérents, aucun
   crash. L'instance déployée n'ayant pas encore son `.indexOn`, le repli automatique sur le nœud
   entier prend le relais — comportement également prouvé par `SyncEngineTest`.
+#   c a i s s e _ p o s l i k  
+ 
