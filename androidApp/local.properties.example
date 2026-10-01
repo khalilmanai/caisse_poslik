@@ -1,0 +1,11 @@
+# Proprietaire de la boutique
+STORE_ID=boutique-centre-ville
+STORE_LABEL=Boutique Centre-ville
+
+# Firebase Realtime Database (optionnel).
+# Laissez vide pour un fonctionnement 100% local : l'application reste
+# entierement fonctionnelle, les ventes attendent dans la file locale.
+FIREBASE_DATABASE_URL=
+
+# sdk.dir=/chemin/vers/Android/Sdk
+local.properties

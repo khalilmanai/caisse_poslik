@@ -1,0 +1,6 @@
+{
+  "database": {
+    "rules": "firebase/database.rules.json",
+    "seed": "firebase/database.seed.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "stores": {
+      "$storeId": {
+        "meta": {
+          "name": "Boutique",
+          "currency": "TND"
+        }
+      }
+    }
+  }
+}

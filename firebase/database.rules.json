@@ -1,0 +1,44 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "stores": {
+      "$storeId": {
+        ".read": true,
+
+        "meta": {
+          ".write": true
+        },
+
+        "sales": {
+          ".indexOn": ["updatedAt", "createdAt"],
+          "$saleId": {
+            ".write": "newData.child('id').val() === $saleId && newData.child('storeId').val() === $storeId",
+            ".validate": "newData.hasChildren(['id','ticketNumber','terminalId','totalMinor','createdAt','paymentMethod','printState','updatedAt']) && newData.child('ticketNumber').val().length <= 40 && newData.child('printState').val().length <= 12"
+          }
+        },
+
+        "ticketIndex": {
+          "$ticketNumber": {
+            ".write": "!data.exists()",
+            ".validate": "newData.isString() && newData.val().length <= 64"
+          }
+        },
+
+        "namespaces": {
+          "$namespace": {
+            ".write": "!data.exists()",
+            ".validate": "newData.child('terminalId').isString() && newData.child('terminalId').val().length <= 40"
+          }
+        },
+
+        "terminals": {
+          "$terminalId": {
+            ".write": "newData.child('terminalId').val() === $terminalId"
+          }
+        }
+      }
+    }
+  }
+}

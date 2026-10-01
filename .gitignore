@@ -1,0 +1,33 @@
+# Gradle / Java
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+*.class
+
+# IDE
+.idea/
+*.iml
+out/
+.vscode/
+
+# Local runtime data (donnerites, base SQLite locale, tickets imprimes)
+*.db
+*.db-wal
+*.db-shm
+data/
+local.properties
+
+# Secrets: ne JAMAIS commiter de credential Firebase
+service-account*.json
+*-service-account*.json
+firebase-service-account.json
+google-services.json
+secrets/
+
+# Identifiants de projet : locales a chaque poste
+.firebaserc
+.firebaserc.*
+
+# OS
+.DS_Store
+Thumbs.db
